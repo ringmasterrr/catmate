@@ -14,23 +14,24 @@ const MarqueeComponent = () => {
     }
   }, []);
 
-  function addAnimation(scrollers) {
-    scrollers.forEach((scroller) => {
+  function addAnimation(scrollers : any )  {
+    scrollers.forEach((scroller : any) => {
       // Make an array from the elements within `.scroller-inner`
       const scrollerInner = scroller.querySelector(".scroller__inner");
-      const scrollerContent = Array.from(scrollerInner.children);
+      const scrollerContent = Array.from(scrollerInner!.children);
 
       // For each item in the array, clone it
       // add aria-hidden to it
       // add it into the `.scroller-inner`
-      scrollerContent.forEach((item) => {
+
+      scrollerContent.forEach((item :any) => {
         const duplicatedItem = item.cloneNode(true);
-        duplicatedItem.setAttribute("aria-hidden", "true");
-        scrollerInner.appendChild(duplicatedItem);
+        duplicatedItem!.setAttribute("aria-hidden", "true");
+        scrollerInner!.appendChild(duplicatedItem);
       });
 
       // Remove aria-hidden from original items to avoid duplicate accessibility issues
-      scrollerContent.forEach((item) => {
+      scrollerContent.forEach((item :any) => {
         item.removeAttribute("aria-hidden");
       });
 
