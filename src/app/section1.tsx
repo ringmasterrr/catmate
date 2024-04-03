@@ -15,7 +15,7 @@ const Section1 = () => {
         className="flex flex-col justify-between w-screen"
       >
         <div>
-          <div className="flex justify-between items-center p-6">
+          <div className="flex justify-between items-center p-6 mr-8">
             <Image
               src={"/logo.png"}
               alt="logo"
@@ -23,7 +23,7 @@ const Section1 = () => {
               height={200}
               className="w-28"
             />
-            <Link href="https://twitter.com">
+            <Link href="https://twitter.com/Catmatesol">
               <Image
                 src={"/x.svg"}
                 alt="Twitter Icon"
