@@ -5,7 +5,7 @@ interface AccordionProps {
   answer: string; // Assuming answer is also a string, change it accordingly if it's a different type
 }
 
-const Accordion = ({ title, answer }) => {
+const Accordion = ( { title, answer } :AccordionProps) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
